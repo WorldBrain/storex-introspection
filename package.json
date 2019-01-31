@@ -1,7 +1,7 @@
 {
-  "name": "@worldbrain/storex-introspection",
+  "name": "@worldbrain/storex-inspection",
   "version": "0.1.0",
-  "description": "Introspection of applications using Storex to interact with their database",
+  "description": "Inspection of applications using Storex to interact with their database",
   "main": "lib/index.js",
   "typings": "lib/index",
   "scripts": {
