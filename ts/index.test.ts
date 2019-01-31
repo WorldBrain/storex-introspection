@@ -1,5 +1,6 @@
 import * as expect from 'expect'
 import { StorageOperationInspection } from '.'
+import { SHARED_CREATE_OBJECT_TEST } from './inspectors.test';
 
 describe('Operation inspection', () => {
     it('should be able to do custom inspections', () => {
@@ -30,15 +31,6 @@ describe('Operation inspection', () => {
 
     it('should be able to inspect well-known operations', () => {
         const inspection = new StorageOperationInspection()
-        expect(inspection.inspect({
-            operation: 'createObject',
-            collection: 'user',
-            args: {
-                displayName: 'Joe',
-                emails: [
-                    {address: 'joe@don.com'}
-                ]
-            }
-        })).toEqual('ooohhhh')
+        expect(inspection.inspect(SHARED_CREATE_OBJECT_TEST.input)).toEqual(SHARED_CREATE_OBJECT_TEST.output)
     })
 })
